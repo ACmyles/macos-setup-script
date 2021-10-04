@@ -97,9 +97,9 @@ defaults write com.apple.dock autohide-delay -float 0;killall Dock
 echo "Preventing Photos from automatically opening when connecting an iPhone or iPad..."
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-echo "Automatically expanding the save panel by default..."
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+# echo "Automatically expanding the save panel by default..."
+# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 echo "Making TextEdit create an untitled document at launch..."
 defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
