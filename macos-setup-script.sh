@@ -36,6 +36,7 @@ BREW_PACKAGES=(
     youtube-dl
     zsh-syntax-highlighting
     gh
+    lsd
 )
 
 echo "Installing homebrew packages... (may take a while)."
