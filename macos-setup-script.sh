@@ -62,7 +62,6 @@ BREW_CASKS=(
     coteditor
     atom
     obs
-    obs-virtual-cam
     mullvadvpn
     lunar
     imageoptim
