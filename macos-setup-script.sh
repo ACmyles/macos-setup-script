@@ -26,7 +26,6 @@ BREW_PACKAGES=(
     ffmpeg
     exiftool
     gdb
-    mac-cleanup
     nmap
     opus
     putty
