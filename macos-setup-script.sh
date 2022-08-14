@@ -22,17 +22,11 @@ brew update
 BREW_PACKAGES=(
     git
     tmux
-    flac
     ffmpeg
     exiftool
-    gdb
     nmap
-    opus
-    putty
-    python@3.9
-    x264
-    x265
-    youtube-dl
+    python@3.10
+    yt-dlp
     zsh-syntax-highlighting
     gh
     lsd
@@ -45,24 +39,17 @@ brew install ${BREW_PACKAGES[@]}
 # Install homebrew casks
 BREW_CASKS=(
     alfred
-    iterm2
     spotify
-    onedrive
-    hookshot
-    alt-tab
-    visual-studio-code
-    steam
-    istat-menus
     discord
-    google-chrome
+    microsoft-office
     microsoft-remote-desktop
+    microsoft-edge
     microsoft-teams
+    iterm2
+    visual-studio-code
     cryptomator
     coteditor
-    atom
-    obs
     mullvadvpn
-    lunar
     imageoptim
     audacity
     vlc
@@ -91,7 +78,9 @@ defaults write com.apple.dock autohide -bool true && \
 killall Dock
 
 echo "Disabling dock autohide delay..."
-defaults write com.apple.dock autohide-delay -float 0;killall Dock
+#defaults write com.apple.dock autohide-delay -float 0;killall Dock
+# ^ Intel, v Apple Silicon
+defaults write com.apple.dock autohide-delay -float 0 && defaults write com.apple.dock autohide-time-modifier -float 0 && killall Dock
 
 echo "Preventing Photos from automatically opening when connecting an iPhone or iPad..."
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
