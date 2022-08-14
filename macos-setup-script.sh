@@ -112,5 +112,8 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 echo "Stopping the power button from putting the Mac in stand-by..."
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 
+echo "Disabling disk eject warning upon removal of external drive..."
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES && sudo pkill diskarbitrationd
+
 # Finished.
 echo "Done! \nExiting..."
