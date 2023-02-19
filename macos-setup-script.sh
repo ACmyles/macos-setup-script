@@ -111,6 +111,8 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 echo "Stopping the power button from putting the Mac in stand-by..."
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
+echo "Stopping creation of .DS_Store files on network shares..."
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 
 # Finished.
 echo "Done! \nExiting..."
